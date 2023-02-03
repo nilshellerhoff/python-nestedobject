@@ -52,7 +52,7 @@ cars2 = NestedObject(cars)
 
 **Filtering**
 
-All cars by BMW:
+All cars by BMW using the example from above:
 ```python
 cars2.filter(lambda _: _["manufacturer"] == "BMW")
 ```
@@ -64,3 +64,15 @@ cars2['_["manufacturer"] == "BMW"']
 ```
 
 In this syntax, you can use any kind of expression, where `_` will be translated to the current element.
+
+**Mapping**
+
+```python
+a = NestedObject([1,2,3,4,5,6,7,8,9,10])
+a.map(lambda x: x**2)
+```
+You can also combine both:
+```python
+a.filter(lambda x: x > 4).map(lambda x: x**2)
+a['_ > 4'].map(lambda x: x**2)
+```
