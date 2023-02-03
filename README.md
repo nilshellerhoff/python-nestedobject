@@ -54,7 +54,7 @@ cars2 = NestedObject(cars)
 
 All cars by BMW using the example from above:
 ```python
-cars2.filter(lambda _: _["manufacturer"] == "BMW")
+cars2.filter(lambda x: x["manufacturer"] == "BMW")
 ```
 
 There is a second syntax for list filtering using string expressions evaluated using `eval()`. **This syntax is unsafe, don't ever use it with unsanitized inputs!** 
