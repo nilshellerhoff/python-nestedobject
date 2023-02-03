@@ -39,6 +39,8 @@ or using the (unsafe) string index filter:
 cars2['_["manufacturer"] == "BMW"'][0]['models']['_["name"] == "X5"'][0]['year']
 ```
 
+Additionally, instead of throwing `IndexError` or `KeyError`, a NestedObject will return `None` if the element cannot be found.
+
 ## Installing
 
 Copy `nestedobject.py` in your folder.
